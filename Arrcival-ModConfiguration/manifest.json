@@ -1,6 +1,6 @@
 {
 	"dependencies": [],
-	"description": "",
+	"description": "A mod to configurate easily properties of every mods.",
 	"extra": {
 		"godot": {
 			"authors": [
