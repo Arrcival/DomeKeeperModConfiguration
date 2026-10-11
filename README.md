@@ -18,7 +18,7 @@ If you do not, the default configuration would be used.
 And you're then good to go, actually.
 To retrieve a property value, you need to first retrieve your current mod configuration using
 ```cs
-var config = ModLoaderConfig.get_current_config(YOUR_MOD_ID)
+var config = ModLoaderConfig.get_current_config(YOUR_MOD_ID).data
 ```
 and then retrieve the value you need
 ```cs
@@ -27,6 +27,10 @@ var property_value = config[VALUE_ID]
 or
 ```cs
 var property_value = config.value_id
+```
+or
+```cs
+var property_value = config.get("value_id", "default value")
 ```
 
 ## How to use (as a player)
