@@ -66,10 +66,15 @@ func _ready():
 		everyconfigVertical.add_child(title)
 
 		var readonly_warning = Label.new()
+		var reandonly_howto = Label.new()
 		readonly_warning.text = "You cannot edit configuration on a default profile."
 		readonly_warning.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		readonly_warning.visible = false
+		reandonly_howto.text = "Go to Modding and create a new profile to be able to edit configuration"
+		reandonly_howto.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		reandonly_howto.visible = false
 		modContainerBox.add_child(readonly_warning)
+		modContainerBox.add_child(reandonly_howto)
 
 
 		var mod_data: Dictionary = mod_config.data
@@ -95,6 +100,7 @@ func _ready():
 			var read_only = mod_config.name == ModLoaderConfig.DEFAULT_CONFIG_NAME
 			if read_only:
 				readonly_warning.visible = true
+				reandonly_howto.visible = true
 
 			if value_type == "boolean":
 				var checkbox = CheckBox.new()
