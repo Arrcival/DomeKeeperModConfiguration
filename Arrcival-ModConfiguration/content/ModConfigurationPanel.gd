@@ -50,7 +50,7 @@ func _ready():
 		if mod_properties == null:
 			continue
 
-		var mod_name = current_mod.manifest.name
+		var mod_name = mod_config.schema.title
 
 
 		var panelContainer = PanelContainer.new()
